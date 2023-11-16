@@ -195,7 +195,10 @@ footer {
     box-sizing: border-box;
 }
 
-.finde, .findedeux, .findetrois, .findequatre {
+.finde,
+.findedeux,
+.findetrois,
+.findequatre {
     color: white;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -219,7 +222,7 @@ footer {
 }
 
 .findetrois {
-    grid-column: 3 / 4; 
+    grid-column: 3 / 4;
 }
 
 .findequatre {
@@ -229,66 +232,54 @@ footer {
 
 @media only screen and (max-width: 768px) {
 
-.logo {
-    /*logo du casque blanc pour sa taille dans l'image de fond */
-    width: 100%;
-    text-align: center;
+    .logo {
+        /*logo du casque blanc pour sa taille dans l'image de fond */
+        width: 70%;
+        text-align: center;
+    }
+
+    .logo img {
+        /*logo du casque blanc pour sa position dans l'image de fond */
+        padding-top: 8%;
+        width: 30%;
+    }
+
+    .CmdMenu {
+        display: block;
+        position: fixed;
+        z-index: 50;
+    }
+
+    .LeMenu {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .perso {
+        /*Permet de jouer avec les personnages DL en HTML */
+        background-image: url(Img/WallpaperDog.jpg);
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .perso img {
+        /*Permet de creer une cellule blanche transparente */
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .disposition {
+        /*Permet de configurer le grid numero 1 pour le responsive*/
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .dispofinde {
+        /*Permet de configurer le grid numero 2 pour le responsive*/
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
 }
-
-.logo img {
-    /*logo du casque blanc pour sa position dans l'image de fond */
-    padding-top: 8%;
-    width: 30%;
-
-}
-.CmdMenu { 
-    display:block;
-    position :fixed; 
-    z-index :50;
-    
-  }
-  .LeMenu {
-    flex-direction:column;
-  }
-
-
-
-
-
-.perso {
-    /*Permet de jouer avec les personnages DL en HTML */
-    background-image: url(Img/WallpaperDog.jpg);
-    width: 100%;
-    flex-direction: column;
-}
-
-.perso img {
-    /*Permet de creer une cellule blanche transparente */
-    width: 100%;
-    flex-direction: column;
-}
-
-.disposition {
-    /*Permet de configurer le grid numero 1 pour le responsive*/
-display: flex;
-flex-direction: column;
-text-align: center;
-}
-} 
-.dispofinde {
-    /*Permet de configurer le grid numero 2 pour le responsive*/
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-.CmdMenu { 
-    display:block;
-    position :fixed; 
-    z-index :50;
-    cursor:pointer;
-    color:white;
-
-  }
-  .LeMenu {
-    flex-direction:column;
-  }

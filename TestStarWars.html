@@ -4,6 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #CmdMenu {
+            width: 100px;
+            height: 50px;
+            background-image: url('file:///C:/wamp64/www/StarWars/Img/Menu.png');
+            background-size: cover;
+            cursor: pointer;
+            position: fixed;
+            right: 0%;
+        }
+    </style>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./style mobile.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,14 +23,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Star Wars</title>
 </head>
 
 <body>
     <div class="container">
-        <div class="logo">
+        <div id="logo123" class="logo">
             <img src="Img/casqueStrom.png" alt="casque de strom">
             <h1>Rebels VS Empire</h1>
         </div>
@@ -49,7 +60,7 @@
                 <li><a href="#">Custom Templates</a></li>
             </ul>
         </nav>
-        <div id="CmdMenu" title="Afficher/Masquer la classe liste">&#9776;</div>
+        <div id="CmdMenu" title="Afficher/Masquer la classe liste"></div>
     </div>
     <hr>
     <main>
@@ -139,7 +150,7 @@
             </div>
         </div>
     </footer>
-<script src="./script.js"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>
