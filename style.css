@@ -1,37 +1,294 @@
-body{
-    background-image: url(file:///C:/wamp64/www/StarWars/Img/fancy-pants.jpg);
+body {
+    /*pour enlever la marge blanche autour*/
+    margin: 0;
 }
 
-.container{
+.container {
+    /*Image du haut */
+    width: 100%;
     display: flex;
-    flex-flow:column nowrap;}
-
-header {
-    grid-area: "header";
-      height: 150px;
-    box-shadow: 0px 5px 15px black;
-    
+    background-image: url('Img/fancy-pants.jpg');
+    background-position: top;
+    background-size: cover;
+    padding: 2%;
+    box-sizing: border-box;
 }
 
-main {
-    background: url(file:///C:/wamp64/www/StarWars/Img/WallpaperDog.jpg)center/cover no-repeat;
-    height: 450px;
-    margin-top: 20px;
+.logo {
+    /*logo du casque blanc pour sa taille dans l'image de fond */
+    width: 30%;
+    text-align: center;
 }
 
-.menuduhaut {
-    display: flex;
-    list-style-type: none;
+.logo img {
+    /*logo du casque blanc pour sa position dans l'image de fond */
+    padding-top: 8%;
+    width: 30%;
+}
+
+.logo h1 {
+    /*agit sur le titre numero1*/
     color: white;
-    font-weight: bold;
-    font-size: x-large;
     font-family: 'Pixelify Sans', sans-serif;
-    gap: 70px;
-    justify-content: end;
-    padding-right: 50px;
-}
-.imagerobot {
-    height: 20%;
-    width: 20px;
 }
 
+.liste {
+    /*agir sur la <nav> complete*/
+    display: flex;
+    justify-content: flex-end;
+    width: 70%;
+    color: white;
+    font-family: 'Pixelify Sans', sans-serif;
+
+}
+
+li {
+    /*Agit sur les li*/
+    list-style-type: none;
+    margin: 5px;
+
+}
+
+.liste a {
+    /*Permet une modification sur les <a> uniquement dans ces li */
+    text-decoration: none;
+    color: white;
+}
+
+.list1 {
+    /*Permet d'avoir un soulignement rouge */
+    margin-bottom: 30px;
+    border-bottom: 2px solid red;
+    font-size: xx-large;
+}
+
+.list2 {
+    /*Permet d'avoir un soulignement bleu */
+    font-size: xx-large;
+    margin-bottom: 30px;
+    border-bottom: 2px solid blue;
+}
+
+.perso {
+    /*Permet de jouer avec les personnages DL en HTML */
+    background-image: url(Img/WallpaperDog.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.perso img {
+    /*Permet de creer une cellule blanche transparente */
+    width: 20%;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.lorem {
+    /*Permet de creer un paragraphe avec ses options */
+    text-align: center;
+    color: white;
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: x-large;
+    background-image: url(Img/fancy-pants.jpg);
+    background-size: cover;
+    background-position: bottom;
+    padding: 5%;
+}
+
+hr {
+    /*Permet de creer un saut à la ligne blanc entre les differents articles */
+    background-color: rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+    border: none;
+    height: 1px;
+}
+
+h2 {
+    color: rgb(189, 123, 0);
+    font-style: normal;
+    font-size: x-large;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h3 {
+    color: rgb(192, 190, 190);
+    font-style: italic;
+    font-family: 'Roboto', sans-serif;
+    font-size: medium;
+}
+
+.disposition img {
+    /*Permet de changer la taille des figurines*/
+    width: 80%;
+    text-align: center;
+    margin: 4%;
+}
+
+.disposition {
+    /*Permet de configurer le grid*/
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    padding-top: 2%;
+    margin-bottom: 2%;
+    padding-left: 2%;
+    gap: 5%;
+}
+
+.grid1 {
+    grid-column: 1 / 2;
+    grid-row: 1 /5;
+    border: rgba(0, 0, 0, 0.3) solid 1px;
+    margin-left: 2%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-right: 2%;
+    font-family: Helvetica;
+    padding-left: 2.5%;
+}
+
+.grid2 {
+    grid-column: 2 / 3;
+    grid-row: 1/3;
+    font-family: Helvetica;
+}
+
+.grid3 {
+    grid-column: 2 / 3;
+    grid-row: 3 / 5;
+    font-family: Helvetica;
+}
+
+.grid4 {
+    grid-column: 3 / 5;
+    grid-row: 1 / 5;
+    font-family: Helvetica;
+}
+
+.containerbis {
+    /* Rendre la video responsive 16:9  */
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%;
+}
+
+.responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+footer {
+    /* Image en bas de page  */
+    background-image: url(Img/WallpaperDog.jpg);
+    background-position: center;
+    background-size: cover;
+    box-sizing: border-box;
+}
+
+.finde, .findedeux, .findetrois, .findequatre {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.dispofinde {
+    /*Permet de configurer le grid numero 2*/
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding-top: 2%;
+    margin-bottom: 2%;
+    padding-left: 2%;
+    gap: 5%;
+}
+
+.finde {
+    grid-column: 1 / 2;
+}
+
+.findedeux {
+    grid-column: 2 / 3;
+}
+
+.findetrois {
+    grid-column: 3 / 4; 
+}
+
+.findequatre {
+    grid-column: 4 / 5;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+.logo {
+    /*logo du casque blanc pour sa taille dans l'image de fond */
+    width: 100%;
+    text-align: center;
+}
+
+.logo img {
+    /*logo du casque blanc pour sa position dans l'image de fond */
+    padding-top: 8%;
+    width: 30%;
+
+}
+.CmdMenu { 
+    display:block;
+    position :fixed; 
+    z-index :50;
+    
+  }
+  .LeMenu {
+    flex-direction:column;
+  }
+
+
+
+
+
+.perso {
+    /*Permet de jouer avec les personnages DL en HTML */
+    background-image: url(Img/WallpaperDog.jpg);
+    width: 100%;
+    flex-direction: column;
+}
+
+.perso img {
+    /*Permet de creer une cellule blanche transparente */
+    width: 100%;
+    flex-direction: column;
+}
+
+.disposition {
+    /*Permet de configurer le grid numero 1 pour le responsive*/
+display: flex;
+flex-direction: column;
+text-align: center;
+}
+} 
+.dispofinde {
+    /*Permet de configurer le grid numero 2 pour le responsive*/
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.CmdMenu { 
+    display:block;
+    position :fixed; 
+    z-index :50;
+    cursor:pointer;
+    color:white;
+
+  }
+  .LeMenu {
+    flex-direction:column;
+  }
