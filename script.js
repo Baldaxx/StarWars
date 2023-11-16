@@ -3,9 +3,11 @@
 window.addEventListener("DOMContentLoaded", (event) => {
     /* MENU */
     const liste = document.getElementById("LeMenu");
+    const logo = document.getElementById("logo123");
     const CmdMenu = document.getElementById("CmdMenu");
     CmdMenu.addEventListener('click', function () {
         liste.style.display = (liste.style.display == 'none') ? '' : 'none';
+        logo.style.display = (logo.style.display == 'none') ? '' : "none";
     });
     // au chargement de la page
     window.onload = function () {
