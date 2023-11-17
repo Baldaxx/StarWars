@@ -5,7 +5,6 @@ body {
 
 .container {
     /*Image du haut */
-    width: 100%;
     display: flex;
     background-image: url('Img/fancy-pants.jpg');
     background-position: top;
@@ -23,7 +22,7 @@ body {
 .logo img {
     /*logo du casque blanc pour sa position dans l'image de fond */
     padding-top: 8%;
-    width: 30%;
+    width: 70px;
 }
 
 .logo h1 {
@@ -31,16 +30,14 @@ body {
     color: white;
     font-family: 'Pixelify Sans', sans-serif;
 }
-
-.liste {
-    /*agir sur la <nav> complete*/
+#LeMenu{
+    width: 70%;
     display: flex;
     justify-content: flex-end;
-    width: 70%;
     color: white;
     font-family: 'Pixelify Sans', sans-serif;
-
 }
+
 
 li {
     /*Agit sur les li*/
@@ -49,7 +46,7 @@ li {
 
 }
 
-.liste a {
+#LeMenu a {
     /*Permet une modification sur les <a> uniquement dans ces li */
     text-decoration: none;
     color: white;
@@ -68,10 +65,18 @@ li {
     margin-bottom: 30px;
     border-bottom: 2px solid blue;
 }
-
+#CmdMenu {
+    background-size: cover;
+    cursor: pointer;
+    position: absolute;
+    display: none;
+}
+#CmdMenu img {
+    width: 100px;
+}
 .perso {
     /*Permet de jouer avec les personnages DL en HTML */
-    background-image: url(Img/WallpaperDog.jpg);
+    background-image: url('Img/WallpaperDog.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -229,30 +234,81 @@ footer {
     grid-column: 4 / 5;
 }
 
+@media  screen and (max-width: 486px) {
+    #CmdMenu {
+        left:68%;
+        display: block;
+    }
+    .container{
+    flex-direction: column;
+    }
+    .logo {
+        /*logo du casque blanc pour sa taille dans l'image de fond */
+        width: 100%;
+        text-align: center;
+    }
+    #LeMenu {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        display: none;
+    }
+    
+    .perso {
+        /*Permet de jouer avec les personnages DL en HTML */
+        background-image: url(Img/WallpaperDog.jpg);
+        width: 100%;
+        flex-direction: column;
+    }
 
-@media only screen and (max-width: 768px) {
+    .perso img {
+        /*Permet de creer une cellule blanche transparente */
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .disposition {
+        /*Permet de configurer le grid numero 1 pour le responsive*/
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .dispofinde {
+        /*Permet de configurer le grid numero 2 pour le responsive*/
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 487px) and (max-width: 767px) {
 
     .logo {
         /*logo du casque blanc pour sa taille dans l'image de fond */
-        width: 70%;
+        width: 100%;
         text-align: center;
     }
 
     .logo img {
         /*logo du casque blanc pour sa position dans l'image de fond */
         padding-top: 8%;
-        width: 30%;
+    
     }
 
-    .CmdMenu {
+    #CmdMenu {
         display: block;
-        position: fixed;
-        z-index: 50;
+        left:72%;
     }
-
-    .LeMenu {
+    .container{
+    flex-direction: column;
+    }
+  
+    #LeMenu {
+        width: 100%;
         display: flex;
         flex-direction: column;
+        display: none;
     }
 
     .perso {
@@ -282,4 +338,16 @@ footer {
         text-align: center;
     }
 
+}
+@media screen and (min-width: 768px) and (max-width: 992px){
+    .container {
+        flex-direction: column;
+    }
+    .logo{
+        width: 100%;
+    }
+    #LeMenu{
+        justify-content: space-evenly;
+        width: 100%;
+    }
 }
